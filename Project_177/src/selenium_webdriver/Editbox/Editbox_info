@@ -18,10 +18,12 @@ Html Source for editboxes:-->
 				Note:-->Sendkeys also usefull to follow keyboard shortcut
 						on selected location.				
 						
-	Clear:--> To clear existing text at editbox,Because webdriver
+	Clear:--> 
+			    Clear commands is only for editboxes.It's
+				clear existing text at editbox,Because webdriver
 				append chracters incase text already available.
-
-
+				
+	
 
 	Syntax:--->
 		//typing character sequence at editbox..
