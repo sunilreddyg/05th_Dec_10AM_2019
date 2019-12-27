@@ -2,12 +2,15 @@ How to identify dropdown at HtmlSource And Select Option from Dropdown :---->
 --------------------------------------------------------------------------------------------------------------------
 Html Source for dropdown:-->
 
+		    
+		    
 		      <select id="Country" >
 					<option value="Ind"> India</option>
 					<option value="Usa"> America</option>
 					<option value="UK"> United kingdom</option>
-		       </select>
-		
+		      </select>
+		       
+		      
 	Note:-->  		At HtmlSource  Object contains Select tag only we 
 					Consider as dropdown or combobox, we use below select 
 					commands only for dropdowns.
@@ -30,8 +33,8 @@ Html Source for dropdown:-->
 	  by using click method.
 				
 				=> selecting process for list boxes 		
-				Step1:-->   First click to open list of itesm
-				step2:--> 	Second click to selected one of item from list.
+				Step1:-->   First click to open list of items
+				step2:--> 	Second click to select one of item from list.
 							
 							
 				
@@ -81,8 +84,7 @@ syntax:-->
 	new Select(driver.findElement(By.id(Country)).Selectbyvalue("UK");
 
 --------------------------------**********------------------------------------
-
-SelectByIndex:--->
+SelectByIndex:--->>
 
 	* In Dropdown options index number always start with zero
 	* index of option-tag under select tag
@@ -100,8 +102,7 @@ htmlsource:--->
 Example:---> Select UK option from dropdown using index
 
 Syntax:-->
-		Select ref=new Select(driver.findElement(By.name("Country"));
-		ref.selectbyindex(1);
+		new select(driver.findElement(By.name("Country"))).SelectByIndex(1);
 ============================================================
 ismultiple:---->
 
