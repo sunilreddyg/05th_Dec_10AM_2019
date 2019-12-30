@@ -6,7 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class Verify_dropdown_multiple_selection_state {
+public class Verify_dropdown_multiple_selection_state 
+{
 
 	public static void main(String[] args) throws Exception {
 		
@@ -21,8 +22,7 @@ public class Verify_dropdown_multiple_selection_state {
 	     * 			Verifying State Dropdow is a single /multiple selection type..
 	     */
 	    
-	    
-	    
+	     
 	   boolean flag=new Select(driver.findElement
 			   (By.id("customState"))).isMultiple();
 	   System.out.println("Dropdown multiple selection status is => "+flag);
@@ -38,9 +38,8 @@ public class Verify_dropdown_multiple_selection_state {
 	   
 	   
 	   
-	  boolean flag1= new Select(driver.findElement(By.id("customState"))).isMultiple();
-	  System.out.println("Dropdown multiple selection status is => "+flag1);
-	   
+	   boolean flag1=new Select(driver.findElement(By.id("customState"))).isMultiple();
+	   System.out.println("Dropdown multiple selection state is => "+flag1);
 	}
 
 }
