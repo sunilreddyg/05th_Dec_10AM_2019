@@ -46,7 +46,7 @@ public class Auto_Complete_Editbox
 	    .selectByVisibleText("5");
 	    
 	    //Click Search flights button
-	    driver.findElement(By.id("SearchBtn")).click();
+	    driver.findElement(By.xpath("//input[@id='SearchBtn']")).click();
 	    
 	    
 	    
