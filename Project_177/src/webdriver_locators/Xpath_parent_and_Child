@@ -192,6 +192,7 @@ Example 8:--->
 </html>		
 					
 					(//input[@id='email'])[2]
+					
 ----------------------------------------------------------------------------
 Example9:-->
 		Recognize object using following sibling
@@ -288,7 +289,6 @@ WebDriver WebElement locator:--->
 Advantages:--->
 		* Easy identification of xpath
 		* Script desing in differnt lanaguages
-
 
 	How to generate basic script and Xpath:--->
 		* Right click on element you wish to generate script
