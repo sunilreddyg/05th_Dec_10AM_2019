@@ -1,6 +1,5 @@
 package corejava.Variables;
 
-import javax.rmi.ssl.SslRMIClientSocketFactory;
 
 public class String_Comparision_Methods {
 
