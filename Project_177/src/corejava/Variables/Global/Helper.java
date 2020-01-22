@@ -9,11 +9,10 @@ public class Helper
 {
 	
 	String filepath=null;
-	WebDriver driver=null;
 	String url=null;
 	String username=null;
 	String password=null;
-	
+	WebDriver driver=null;
 	/*
 	 * Methodname:--> launch browser
 	 * 	Note:--> Before calling method Assign driver path  and Url

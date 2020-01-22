@@ -1,0 +1,31 @@
+UserInterface verification commands:-->
+
+	 In Webdriver all verification commands starts 
+	 with <<get>. keyword. These commands work like
+	 checkpoints to verify expected behaviour presented
+	 at webpage.
+	 
+	 These commands categorized into two types
+	 		1. Page verification commands
+	 		2. Element Verification commands
+	 		
+	 1. Page Verification commands
+	 			
+	 			getTitle
+	 			getCurrentUrl
+	 			getPageSource
+	 			getWindowHandle
+	 			getWindowHandles
+	 			
+	 2. Element Verification commands
+	 
+	 			getText
+	 			getAttribute
+	 			getLocation
+	 			getSize
+	 			getTagname
+	 			getRect
+	 			
+====================================================
+	 			
+	 			
