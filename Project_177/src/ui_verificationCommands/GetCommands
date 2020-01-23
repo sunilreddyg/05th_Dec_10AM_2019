@@ -27,5 +27,47 @@ UserInterface verification commands:-->
 	 			getRect
 	 			
 ====================================================
-	 			
+getTitle:--->
+			method capture current window title at runtime.
+			In webpapplication every page contain indepedent title.
+			By capture runtime title we can verify expected page
+			displayed at browser window.
+		
+			Syntax:-->
+					String Runtime_title=driver.getTitle();
+					System.out.println(Runtime_title);				
+====================================================================		
+getCurrenturl:-->
+				method capture current window Url at runtime.
+				In web application every page contains uniqe URL.
+				By capture runtime url we can verify expected page
+				displayed at browser window.
+			
+			Syntax:-->
+					String Runtime_url=driver.getCurrentUrl();
+					System.out.println(Runtime_url);				
+========================================================
+getPageSource:--->	
+			Method capture Entire pageSource into String format
+			during runtime.  [Backend HTML source]
+			
+			With in soruce we can verify
+			
+					Element ID's  &  HMTL Nodes 
+					Title of a page
+					url of a page
+					page Text
+		
+			String pageSource=driver.getpageSource();
+			System.out.println(pageSoruce);	 
+			
+			
+			
+			
+			
+			
+			
+			
+			
+						
 	 			
