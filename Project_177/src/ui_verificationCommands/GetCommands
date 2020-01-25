@@ -60,9 +60,50 @@ getPageSource:--->
 		
 			String pageSource=driver.getpageSource();
 			System.out.println(pageSoruce);	 
-			
-			
-			
+==================================================================
+getText:-->
+		
+		Method capture visible text using location.from the
+		backend it capture innertext from the selected node.
+		
+		=> It capure selected node and child node text as well.
+		
+	Syntax:--->
+				  WebElement Element=driver.findElement(By.id("x"));
+				  String Element_text=Element.getText();
+				  System.out.println(Element_text);
+				  
+			Note1:--> if selected element not contains any text, method
+				      return empty status.
+				   
+			Note2:--> Method capture selected element and it's child
+					  innertext.	
+					  
+			Note3:--> Method capture only visible text on webpage,In case element  
+							is hidden gettext method return empty status.
+					
+				Que:-->What we can verify with gettext?..  
+						
+						* We can verify Status messages visible at webpage
+						* We can verify error messages visible at webpage
+						* We can verify expected text visible at webpage				
+=======================================================================		
+getAttribute("propertyname");
+	
+	Method capture runtime attribute value using attributename.
+				  
+				  
+		Syntax:-->  
+		  	WebElement Element=driver.findElement(By.id("x"));
+		  	String value=Element.getAttribute("attributename");
+		  	System.out.println(value);	
+		  	
+				  	
+  	Note:--> Developer use attributes, to chanage runtime
+  			behaviour of element. by capture element attributes
+  			at runtime we can prove element behaviour available
+			w.r.t client requirement.
+		  				
 			
 			
 			
