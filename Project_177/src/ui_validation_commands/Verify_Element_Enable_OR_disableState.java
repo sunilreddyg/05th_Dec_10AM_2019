@@ -20,27 +20,27 @@ public class Verify_Element_Enable_OR_disableState
 		Thread.sleep(5000);		
 
 		/*
-		 * Testcase:-->Verify locality editbox without city selection
+		 * Testcase:-->Verify locality editbox without state and city selection
 		 * expected:--> Editbox should disable and display 
 		 * 		text Please enter after city selection
 		 * 	
 		 */
 		
 		WebElement Locality_Editbox=driver.findElement(By.id("customLocality"));
-		if(!Locality_Editbox.isEnabled()) //!--NOT
+		
+		if(!Locality_Editbox.isEnabled())  //!--NOT
 		{
-			System.out.println("Testpass:--> As expected Locality editbox disabled before state selection");
+			System.out.println("Testpass :--> As expected locality editbox was disable");
 		}
 		else
 		{
-			System.out.println("Testfail:--> Locality editbox was enabled before state selection");
+			System.out.println("TestFail :--> Expecation faile locality editbox is enabled");
 		}
-		
 		
 		
 		
 		/*
-		 * Testcase:-->Verify locality editbox After city selection
+		 * Testcase:-->Verify locality editbox After state and city selection
 		 * expected:--> Editbox should enable and display
 		 * 		text Please enter locality
 		 */

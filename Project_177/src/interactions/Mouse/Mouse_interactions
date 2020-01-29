@@ -1,0 +1,77 @@
+Mouse Interactions at webdriver:-->
+
+		In Webdriver all mouse interaction commands
+		available at "Actions" class.
+		
+		1. Click          [It Analog left click at mouse]
+		2. DoubleClick
+		3. ContextClick   [It Analog right click at mouse]
+		4. MovetoElement
+		5. ClickAndHold
+		6. Release
+		7. DragAndDrop
+		8. DragAndDropBy
+		
+	    Action Methods:-->
+	    		
+	    		1. Pause
+	    		2. Build
+	    		3. Perform
+	    		
+	   Note:--> Inorder to use mouse interactions, we should
+	   			create object for <<  Actions  >> class.
+	   			
+==================================================================
+Click:-->
+		method analog left click action using mouse.
+		==> mouse left click option at webpage.
+		
+		Syntax:-->
+				new Actions(driver).Click().perform();
+
+		Syntax:-->
+				WebElement Element=driver.findElement(By.id("LocationID"));
+				new Actions(driver).click(WebElement).perform();
+
+MovetoElement:-->
+	    method analog Hover action at element.
+	    
+	    Syntax:-->
+				new Actions(driver).movetoElement(WebElement).perform();
+				
+DoubleClick:-->
+		
+		perform double click on Selected target/Webapge.
+
+		 Syntax:-->
+				new Actions(driver).doubleclick().perform();
+				new Actions(driver).doubleclick(WebElement).perform();
+				
+ContextClick:-->
+		Method analog right click option at mouse.			
+				
+		 Syntax:-->
+				new Actions(driver).ContextClick().perform();
+				new Actions(driver).ContextClick(WebElement).perform();		
+				
+
+ClickAndHold:-->
+		Method hold mouse left click button down, And allowd use
+		drag mouse to any expected target at webpage.
+			[Text selections at webpage]
+			[Group of option selections]
+			[Drag object from source locationt to any destination at webpage]
+			
+		Syntax:-->
+				new Actions(driver).ClickAndHold(WebElement src)
+				.MovetoElement(WebElement dst).Release()
+
+
+		Note:--> We should use ClickAndHold & MovetOElement & Release as
+				 combination inordert to perform any single action.
+
+
+
+	    		
+	    			
+		
