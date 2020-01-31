@@ -64,14 +64,58 @@ ClickAndHold:-->
 			
 		Syntax:-->
 				new Actions(driver).ClickAndHold(WebElement src)
-				.MovetoElement(WebElement dst).Release()
+				.MovetoElement(WebElement dst).Release().perform();
 
 
 		Note:--> We should use ClickAndHold & MovetOElement & Release as
 				 combination inordert to perform any single action.
 
+DragAndDrop:-->
+		Method allow user to drag source element to target location.
+		
+		Syntax:-->
+			WebElement Src=driver.findElement(By.id("X"));
+			WebElement Dst=driver.findElement(By.id("Y"));
+			new Actions(driver).DragAndDrop(Src,Dst).perform();
+		
+DragAndDropBy:-->
+		Method allows to drag any Single element to perticular
+		x and y offset coordinations at webpage.		
+		
+	    Syntax:-->
+	    	WebElement Src=driver.findElement(By.id("X"));	
+	    	
+	    	//Dragging horizontal 50 coordinates from source.
+	    	new Actions(driver).DragAndDropBy(50,0).perform();	
+	    	
+	    	//Vertical dragging 50 coordinates from Source
+	    	new Actions(driver).DragAndDropBy(0,50).perform();	
 
-
-	    		
-	    			
+=======================================================================		
+Actions Methods:-->
+	
+	Perform:-->
+				Without Perform method all mouse and keyboard
+				interaction are incomplete.
+				
+		Syntax:-->
+			new Action(driver).click(WebElement);   		//Incomplete Action
+			new Action(driver).click(WebElement).perform(); //Complete Action  
+		
+Build:-->
+		Any group of mouse and keyboard actions to build as single option.
+		
+				
+		Syntax:-->
+			new Actions(driver).click(Webelement).click(WebElement)
+				.build().perform();		
+				
+pause:-->
+		While using any mouse actions we can send interval timegap
+		using milliseconds.
+		
+		Syntax:-->
+			new Actions(driver).movetoelement(WebElement)
+			.pause(2000).perform();
+			
 		
