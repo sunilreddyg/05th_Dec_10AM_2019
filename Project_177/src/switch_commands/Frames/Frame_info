@@ -49,8 +49,7 @@ Syntax:--->
 	driver.switchTo().frame(WebElement Element);
 
 
-Example:--->Target firstname object
-		using above source find Frame Elemnet 
+Example:--->Target firstname object under frame
 		
 		WebElemen Frame_Element_ref=driver.findELement(By.xpath("//frame[@class='reg_account']"));
 		driver.switchTo().frame(Frame_Element_ref);
@@ -62,7 +61,7 @@ Example:-->
 			 when it have ID / Name property
 
 	Syntax:--->
-	driver.switchTo().frame(String framename);
+	driver.switchTo().frame(String framename_or_ID);
 
 Example:--->
 		using above source find Frame Elemnet 
