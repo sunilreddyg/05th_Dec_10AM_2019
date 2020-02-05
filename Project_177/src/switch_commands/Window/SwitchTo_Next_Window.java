@@ -24,6 +24,8 @@ public class SwitchTo_Next_Window {
 	    WebElement Instagram_link=driver.findElement(By.linkText("Instagram"));
 	    Instagram_link.click();
 	    
+	
+	    
 	    //Get all window ID's
 	   Set<String> All_windowIDS= driver.getWindowHandles();
 	   //Iterate for number of windows
