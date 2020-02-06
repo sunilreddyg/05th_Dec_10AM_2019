@@ -49,7 +49,9 @@ public class SwitchTo_Next_Window {
 	   Email_or_Mobile.clear();
 	   Email_or_Mobile.sendKeys("9030248855");
 	   
-	   
+	   WebElement Fullname=driver.findElement(By.xpath("//input[contains(@aria-label,'Full Name')]"));
+	   Fullname.clear();
+	   Fullname.sendKeys("Mindq");
 	   
 	   
 	   

@@ -9,7 +9,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class CaptureScreen {
+public class CaptureScreen 
+{
 
 	public static void main(String[] args) throws IOException, InterruptedException 
 	{
@@ -37,6 +38,17 @@ public class CaptureScreen {
 	    * PNG:--> portable network graphic
 	    * 		We can alos use other image extensions.
 	    */
+	   
+
+		/*
+		 * Disadvantage of screen Capture at selenium-webdriver:-->
+		 * 		1. Can't take screenshot when alert presented
+		 * 		2. Only Capture Visible Interface [Top Interface]
+		 * 		3. Image Override everytime, Incase File name not changed.
+		 */
+		
+
+	   
 
 	}
 
