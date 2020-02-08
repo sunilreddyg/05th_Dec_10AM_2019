@@ -13,7 +13,7 @@ public class Javascript_Runtime_Changes
 	{
 		
 		//Set Runtime environment variable for chrome driver
-		System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");    
+		System.setProperty("webdriver.chrome.driver", "Drivers\\chromedriver.exe");    
 		//browser initiation command
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://www.facebook.com/");

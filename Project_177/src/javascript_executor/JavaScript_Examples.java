@@ -22,11 +22,12 @@ public class JavaScript_Examples
 		
 		//return current window title
 		String Runtime_title=js.executeScript("return document.title").toString();
-		System.out.println("Curret window title is => "+Runtime_title);
+		System.out.println("Current page title is => "+driver.getTitle());
 		
 		//return current window URL
 		String Runtime_url=js.executeScript("return window.location.href").toString();
 		System.out.println("Current window title is => "+Runtime_url);
+		Thread.sleep(5000);
 		
 		//Move to Element using mouse action.
 		js.executeScript("document.getElementById('month').scrollIntoView()");

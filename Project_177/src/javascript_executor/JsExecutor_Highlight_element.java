@@ -20,7 +20,7 @@ public class JsExecutor_Highlight_element
 	{
 		
 		//Set Runtime environment variable for chrome driver
-		System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");    
+		System.setProperty("webdriver.chrome.driver", "Drivers\\chromedriver.exe");    
 		//browser initiation command
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://www.facebook.com");
@@ -45,7 +45,7 @@ public class JsExecutor_Highlight_element
 		
 		
 		File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(src, new File("screens\\image.png"));
+		FileUtils.copyFile(src, new File("screens\\image_with_highlight.png"));
 		
 
 		//Page refresh

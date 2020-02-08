@@ -26,11 +26,25 @@ public class Action_Commands_Using_JS
 		js.executeScript("document.getElementById('email').value='9030248855'");
 		js.executeScript("document.getElementById('pass').value='Hello123456'");
 		
-		//javascript using xpath or any locator otherthan ID
-		WebElement Login_btn=driver.findElement(By.xpath("//input[contains(@value,'Log In')]"));
-		js.executeScript("arguments[0].click()", Login_btn);
+	
+		//select dropdown with value property using javascript 
+		js.executeScript("document.getElementById('day').value='5'");
+		//select dropdown with Index number  using javascript
+		js.executeScript("document.getElementById('month').selectedIndex ='06'");
 		
 		
+		//javascript selecting radio button
+		WebElement Female_Rbtn=driver.findElement(By.xpath("//input[@value='1']"));
+		js.executeScript("arguments[0].checked='true'", Female_Rbtn);
+		Thread.sleep(3000);
+		
+		//javascript selecting radio button
+		WebElement Male_Rbtn=driver.findElement(By.xpath("//input[@value='2']"));
+		js.executeScript("arguments[0].click()", Male_Rbtn);
+		
+		//Perform click action using javascript on button..
+		WebElement Signup_btn=driver.findElement(By.xpath("//button[@name='websubmit']"));
+		js.executeScript("arguments[0].click()",Signup_btn);
 	}
 
 }
