@@ -1,4 +1,4 @@
-package waitcommands;
+package wait_commands;
 
 import java.util.concurrent.TimeUnit;
 
