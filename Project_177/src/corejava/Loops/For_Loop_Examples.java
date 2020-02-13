@@ -40,6 +40,13 @@ public class For_Loop_Examples {
 			System.out.println(tools[i]);
 		}
 		
+		//Conduct sum between 1 to 100
+		int sum=0;
+		for (int i = 1; i <= 100; i++) 
+		{
+			sum=sum+i;
+		}
+		System.out.println("total value is => "+sum);
 		
 	}
 
