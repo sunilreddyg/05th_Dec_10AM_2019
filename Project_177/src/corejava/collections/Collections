@@ -100,9 +100,29 @@ Collections:-->
  								2. LinkedList
  								3. Vector	
  								
- 								
- 								
- 								
+ 			1. Arraylist:-->
+ 					in Arraylist retrieving is faster than
+ 					linktext list.
+ 					
+ 					List<String> list=new ArrayList<String>();					
+ 							
+ 							
+ 			2. LinktextList:-->
+ 					in Linktextlist Insertion of data and removal to 
+ 					data in faster than Arraylist..				
+ 							
+ 								List<String> list=new LinkedList<String>();					
+ =============================================================
+ Map:-->
+		Map is a interface class which store pair objects
+				as collection. We store pair object using keyname
+				and value.. 
+		 
+				=> Hashtable is sorter list of set..
+		 			[Hashtable alos unorder collection of objects
+		 			and doesn't accept duplicates...]
+====================================================================
+		 						
  								
  								
  									
