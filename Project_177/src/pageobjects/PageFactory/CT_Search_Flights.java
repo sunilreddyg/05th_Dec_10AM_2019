@@ -60,18 +60,17 @@ public class CT_Search_Flights
 	@FindBy(xpath = "//select[@id='Infants']")
 	public WebElement Infants_Dropdown;
 	
-	
-
 	@FindBy(xpath = "//a[contains(@id,'MoreOptionsLink')]")
 	public WebElement MoreOptions_link;
 	
-	
+	@FindBy(xpath = "//input[@id='DepartDate']")
+	public WebElement DepartureDate_Editbox;
 	
 	
 	
 	
 	/*
-	 * Methodname:--> Search flight
+	 * Methodname:--> Search flight for oneway
 	 */
 	public void flight_search_oneway_trip()
 	{
@@ -88,8 +87,10 @@ public class CT_Search_Flights
 		Arrival_EB.sendKeys("D"+Keys.ARROW_RIGHT+"EL");
 		Delhi_City_Airport.click();
 		
-		Flight_Search_btn.click();
+		DepartureDate_Editbox.clear();
+		DepartureDate_Editbox.sendKeys("Sat, 29 Feb, 2020");
 		
+		Flight_Search_btn.click();
 		
 	}
 	
