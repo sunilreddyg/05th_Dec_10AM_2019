@@ -1,7 +1,6 @@
 package pageobjects.PageFactory.With_Global_Constructor;
 
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
