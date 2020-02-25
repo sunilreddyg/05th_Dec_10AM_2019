@@ -2,21 +2,18 @@ package framework.Datadrivern.Excel_POI;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFShape;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class Read_Data_From_Specific_Row_And_Cell {
+public class Read_Data_From_Specific_Row_And_Cell 
+{
 
 	public static void main(String[] args) throws IOException 
 	{
 		
-		
-		
-			
+
 			//Target Excel binary file
 			FileInputStream fi=new FileInputStream("TestData\\InputData.xlsx");
 			System.out.println("file located");
@@ -50,6 +47,10 @@ public class Read_Data_From_Specific_Row_And_Cell {
 			 * getBooleanvalue:-->
 			 * 			Method read boolean value true/false from cell. 
 			 */
+			
+			
+			
+			
 			
 	}
 
