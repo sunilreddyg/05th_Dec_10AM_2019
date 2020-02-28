@@ -18,8 +18,7 @@ public class Junit_with_Extent_Reports
 	static ExtentTest test;
 	static String filepath="Reports\\Junit_Reports.html";
 
-	
-	
+
 	@Test
 	public void Tc001_Login_page()
 	{
@@ -39,8 +38,6 @@ public class Junit_with_Extent_Reports
 	{
 		test.log(LogStatus.INFO, "Messenger page displayed");
 	}
-	
-	
 	
 	
 	@BeforeClass
