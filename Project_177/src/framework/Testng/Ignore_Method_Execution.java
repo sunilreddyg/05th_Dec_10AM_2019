@@ -3,7 +3,8 @@ package framework.Testng;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
-public class Ignore_Method_Execution {
+public class Ignore_Method_Execution
+{
 
 	@Test
 	public void tc001()

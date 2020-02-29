@@ -120,7 +120,7 @@ Example:--->How to provide description for testng method
 Note:-->
 	After Generating result , In test output folder,Under 
 	Index---->click Show All pass methods--->Along with Methodname
-	description display
+	description will be display.
 
 	Also display method description with in Console
 	=> Description is not mandatory
@@ -148,7 +148,7 @@ how to provide execution dependency for single method:--->
 how to provide execution dependency for multiple methods with in testng class:--->
 
 
-@Test(dependsonMethods={"dependent_m1","dependent_m2" })
+@Test(dependsonMethods={"dependent_m1","dependent_m2"})
 
 	Note:---> If dependent methdod fail , Testng skip method execution Instead of
 		making test result as fail..
