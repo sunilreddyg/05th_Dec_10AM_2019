@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [default]">
+  <parameter name="browser_name" value="firefox"/>
+  <parameter name="uid" value="sunil"/>
+  <parameter name="appurl" value="http://facebook.com"/>
+  <parameter name="pwd" value="112345"/>
+  <parameter name="Fname" value="Akash"/>
+  <test thread-count="5" name="test1(failed)">
+    <classes>
+      <class name="framework.Testng.Suite_Parameter.Get_Parameters_From_Suite">
+        <methods>
+          <include name="launch_browser" invocation-numbers="0"/>
+          <include name="loadWebpage" invocation-numbers="0"/>
+          <include name="User_login" invocation-numbers="0"/>
+          <include name="User_registration" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- framework.Testng.Suite_Parameter.Get_Parameters_From_Suite -->
+    </classes>
+  </test> <!-- test1(failed) -->
+</suite> <!-- Failed suite [default] -->

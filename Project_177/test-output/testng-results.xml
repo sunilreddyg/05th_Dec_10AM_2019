@@ -1,45 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="3" total="6" passed="3">
+<testng-results skipped="0" failed="0" ignored="1" total="5" passed="4">
   <reporter-output>
-    <line>
-      <![CDATA[tcoo2 executed]]>
-    </line>
-    <line>
-      <![CDATA[tcoo5 executed]]>
-    </line>
-    <line>
-      <![CDATA[tcoo6 executed]]>
-    </line>
   </reporter-output>
-  <suite name="default-suite" duration-ms="78" started-at="2020-02-29T13:11:48 IST" finished-at="2020-02-29T13:11:48 IST">
+  <suite name="Default suite" duration-ms="110" started-at="2020-03-02T12:46:22 IST" finished-at="2020-03-02T12:46:22 IST">
     <groups>
     </groups>
-    <test name="Test1" duration-ms="78" started-at="2020-02-29T13:11:48 IST" finished-at="2020-02-29T13:11:48 IST">
-      <class name="framework.Testng.TestSuite.Class2">
-        <test-method status="PASS" signature="tc005()[pri:0, instance:framework.Testng.TestSuite.Class2@6e6c3152]" name="tc005" duration-ms="0" started-at="2020-02-29T13:11:48 IST" finished-at="2020-02-29T13:11:48 IST">
+    <test name="Default test" duration-ms="110" started-at="2020-03-02T12:46:22 IST" finished-at="2020-03-02T12:46:22 IST">
+      <class name="framework.Testng.DataProvider.DP_InputData">
+        <test-method status="PASS" signature="get_user_info(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:framework.Testng.DataProvider.DP_InputData@35d176f7]" name="get_user_info" duration-ms="0" started-at="2020-03-02T12:46:22 IST" data-provider="User_info" finished-at="2020-03-02T12:46:22 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[user1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[user1@gmail.com]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
-            <line>
-              <![CDATA[tcoo5 executed]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- tc005 -->
-        <test-method status="PASS" signature="tc006()[pri:0, instance:framework.Testng.TestSuite.Class2@6e6c3152]" name="tc006" duration-ms="0" started-at="2020-02-29T13:11:48 IST" finished-at="2020-02-29T13:11:48 IST">
+        </test-method> <!-- get_user_info -->
+        <test-method status="PASS" signature="get_user_info(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:framework.Testng.DataProvider.DP_InputData@35d176f7]" name="get_user_info" duration-ms="0" started-at="2020-03-02T12:46:22 IST" data-provider="User_info" finished-at="2020-03-02T12:46:22 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[user2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[101]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[user2@gmail.com]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
-            <line>
-              <![CDATA[tcoo6 executed]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- tc006 -->
-      </class> <!-- framework.Testng.TestSuite.Class2 -->
-      <class name="framework.Testng.TestSuite.Class1">
-        <test-method status="PASS" signature="tc002()[pri:0, instance:framework.Testng.TestSuite.Class1@6ebc05a6]" name="tc002" duration-ms="16" started-at="2020-02-29T13:11:48 IST" finished-at="2020-02-29T13:11:48 IST">
+        </test-method> <!-- get_user_info -->
+        <test-method status="PASS" signature="get_user_info(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:framework.Testng.DataProvider.DP_InputData@35d176f7]" name="get_user_info" duration-ms="0" started-at="2020-03-02T12:46:22 IST" data-provider="User_info" finished-at="2020-03-02T12:46:22 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[user4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[103]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[user4@gmail.com]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
-            <line>
-              <![CDATA[tcoo2 executed]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- tc002 -->
-      </class> <!-- framework.Testng.TestSuite.Class1 -->
-    </test> <!-- Test1 -->
-  </suite> <!-- default-suite -->
+        </test-method> <!-- get_user_info -->
+        <test-method status="PASS" signature="get_user_info(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:framework.Testng.DataProvider.DP_InputData@35d176f7]" name="get_user_info" duration-ms="0" started-at="2020-03-02T12:46:22 IST" data-provider="User_info" finished-at="2020-03-02T12:46:22 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[user3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[102]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[user3@gmail.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- get_user_info -->
+      </class> <!-- framework.Testng.DataProvider.DP_InputData -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

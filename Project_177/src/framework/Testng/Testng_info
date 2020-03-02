@@ -294,6 +294,7 @@ public void Testmethod(String par1, String par2)
 }
 
 Note:--->  We can find Parameter information at emailable report.
+			Tesng genarate input values at testoutput folder..
 					
 =============================================================>
 --->How to Execute Two are multiple tests with in suite.. 
@@ -350,8 +351,12 @@ Note:--->  We can find Parameter information at emailable report.
 	Adv:--->
 		* Without Defining Loops we can Execute test with multiple set
 				of data.
+		* Instead of following Excel kind of datadriven framework,
+			We can organize multiple set of data to testcases.
 		* Dataprovider genarate input data in emailable report.
-
+		* Annotation allows to create testdata easy way,
+		  without writing programming.
+		  
 Creating Dataprovider class:--->
 		Right click on package---->Create testng Class--->
 		Enter Classname--->Select Dataprovider annoation
