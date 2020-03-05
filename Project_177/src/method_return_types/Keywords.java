@@ -1,4 +1,4 @@
-package method_parameters;
+package method_return_types;
 
 import java.awt.AWTException;
 import java.awt.Robot;
@@ -387,6 +387,57 @@ public class Keywords
 					}
 				  }		
 			}
+		 
+		 
+		 //UserDefined keyword with Return values...
 	 
+		 
+		 /*
+		 * KeywordName:--> IsTitle_Presented
+		 * Author:-->
+		 * CreatedOn;-->
+		 * ReviewedBy:-->
+		 * Parameters used:--> Local
+		 * LastUpdationDate:-->
+		 */	 
+		 public boolean  isTitle_Presented(String Exp_title)
+		 {
+			 String Runtime_title=driver.getTitle();
+			 boolean flag=Runtime_title.contains(Exp_title);
+			 return flag;
+		 }
+		 
+		 
+
+		 /*
+		 * KeywordName:--> IsUrlPresented
+		 * Author:-->
+		 * CreatedOn;-->
+		 * ReviewedBy:-->
+		 * Parameters used:--> Local
+		 * LastUpdationDate:-->
+		 */	 
+		 public boolean  is_Url_Presented(String Exp_url)
+		 {
+			 String Runtime_Url=driver.getCurrentUrl();
+			 boolean flag=Runtime_Url.contains(Exp_url);
+			 return flag;
+		 }
+		 
+		 
+		 /*
+		 * KeywordName:--> IsUrlPresented
+		 * Author:-->
+		 * CreatedOn;-->
+		 * ReviewedBy:-->
+		 * Parameters used:--> Local
+		 * LastUpdationDate:-->
+		 */	
+		 public boolean is_text_visible_At_Webpage(String Exp_text)
+		 {
+			 String Page_visible_text=driver.findElement(By.tagName("body")).getText();
+			 boolean flag=Page_visible_text.contains(Exp_text);
+			 return flag;
+		 }
 	  
 }

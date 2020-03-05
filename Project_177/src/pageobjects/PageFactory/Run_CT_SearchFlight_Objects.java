@@ -1,12 +1,9 @@
 package pageobjects.PageFactory;
 
 import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 
 public class Run_CT_SearchFlight_Objects 
 {
