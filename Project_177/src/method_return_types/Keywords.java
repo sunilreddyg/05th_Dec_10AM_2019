@@ -9,11 +9,13 @@ import java.awt.event.KeyEvent;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -426,7 +428,9 @@ public class Keywords
 		 
 		 
 		 /*
-		 * KeywordName:--> IsUrlPresented
+		 * KeywordName:--> IsTextVisibleAt Webpage
+		 * Description:--> Method can verify any visible text at webpage
+		 * 					and return boolean value ture/false.
 		 * Author:-->
 		 * CreatedOn;-->
 		 * ReviewedBy:-->
@@ -439,5 +443,187 @@ public class Keywords
 			 boolean flag=Page_visible_text.contains(Exp_text);
 			 return flag;
 		 }
+		 
+		 /*
+		 * KeywordName:--> Verify Element presented at source
+		 * Author:-->
+		 * CreatedOn;-->
+		 * ReviewedBy:-->
+		 * Parameters used:--> Local
+		 * LastUpdationDate:-->
+		 */	 
+	 	public boolean is_Element_presented(String Exp_elementSource)
+	 	{
+	 			String Runtime_pageSource=driver.getPageSource();
+	 			boolean flag=Runtime_pageSource.contains(Exp_elementSource);
+	 			return flag;
+	 	}
+		 
+		 
+
+	 	/*
+		 * KeywordName:--> Verify text presented at element.
+		 * Author:-->
+		 * CreatedOn;-->
+		 * ReviewedBy:-->
+		 * Parameters used:--> Local
+		 * LastUpdationDate:-->
+		 */	 
+	 	public boolean is_text_presented_At_Element(By locator,String exp_text)
+	 	{
+	 		boolean flag=false;
+	 		try {
+	 			 flag= wait.until(ExpectedConditions.textToBePresentInElementLocated(locator, exp_text));
+			} catch (Exception e) {
+				return flag;
+			}
+	 		
+	 		return flag;
+	 	}
+	 	
 	  
+	 	/*
+		 * KeywordName:--> Verif expected input available at editbox
+		 * Author:-->
+		 * CreatedOn;-->
+		 * ReviewedBy:-->
+		 * Parameters used:--> Local
+		 * LastUpdationDate:-->
+		 */	 
+	 	public boolean isInput_presented_At_Editbox(By locator,String input)
+	 	{
+	 		try {
+	 			boolean flag=wait.until(ExpectedConditions.textToBePresentInElementValue(locator, input));
+	 			return flag;
+			} catch (Exception e) {
+				return false;
+			}
+	 		
+	 	}
+	 	
+	 	
+	 	/*
+		 * KeywordName:--> Method verify alert presented at webpage
+		 * Author:-->
+		 * CreatedOn;-->
+		 * ReviewedBy:-->
+		 * Parameters used:--> Local
+		 * LastUpdationDate:-->
+		 */	
+	 	public boolean isAlert_Presented()
+	 	{
+	 		try {
+				driver.switchTo().alert();
+				return true;
+			} catch (NoAlertPresentException e) {
+				System.out.println(e.getMessage());
+				return false;
+			}
+	 	}
+ 		/*
+		 * KeywordName:--> Method  verify Expected text presented at alert
+		 * 				  and close alert window
+		 * Author:-->
+		 * CreatedOn;-->
+		 * ReviewedBy:-->
+		 * Parameters used:--> Local
+		 * LastUpdationDate:-->
+		 */	
+	 	public boolean is_alert_text_presented(String exp_alert_text)
+	 	{
+	 		boolean flag=false;
+	 		if(isAlert_Presented())
+	 		{
+	 			String Runtime_alert_text=driver.switchTo().alert().getText();
+	 			flag=Runtime_alert_text.contains(exp_alert_text);
+	 			driver.switchTo().alert().accept();
+	 			return flag;
+	 		}
+	 		else
+	 		{
+	
+	 			return flag;
+	 		}
+	 	}
+	 	
+	 	/*
+		 * MethodName:--> Method return selected row and cell value [From static table]
+		 * Author:-->
+		 * CreatedON:-->
+		 * ReviewedBy:-->
+		 * Parametersused:-->
+		 * Lasupdated Date:--->
+		*/
+		public WebElement Get_Static_Webtable_Cell(String TableXpath,int Row, int Cell)
+		{
+			//Identify Webtable
+			WebElement table=driver.findElement(By.xpath(TableXpath));
+			
+			//Find number of rows available at webtable
+			List<WebElement> rows=table.findElements(By.tagName("tr"));
+			
+			//Target Required row
+			WebElement SelectedRow=rows.get(Row);
+			
+			//using selected row find list of cells
+			List<WebElement> cells=SelectedRow.findElements(By.tagName("td"));
+			
+			//Target Required Cell
+			WebElement Webtable_cell=cells.get(Cell);
+			
+			return Webtable_cell;
+		}
+		
+		
+		/*
+		 * MethodName:--> Method return selected Record referal cell [From Dynamic table]
+		 * Author:-->
+		 * CreatedON:-->
+		 * ReviewedBy:-->
+		 * Parametersused:-->
+		 * Lasupdated Date:--->
+		*/
+		
+		public WebElement Get_Dynaic_Webtable_Cell(String TableXpath, String Recordname,int Cell)
+		{
+			//Identify Webtable
+			WebElement table=driver.findElement(By.xpath(TableXpath));
+			
+			//Find number of rows available at webtable
+			List<WebElement> rows=table.findElements(By.tagName("tr"));
+			
+			boolean flag=false;
+			WebElement Webtable_Cell = null;
+			//Iterate for number of rows
+			for (int i = 1; i < rows.size(); i++) 
+			{
+				
+				//target Each Dynamic row at table
+				WebElement DynamicRow=rows.get(i);
+				
+				//Capture text on Each Row
+				String RowText=DynamicRow.getText();
+				
+				//Accept Condition where any record match in dynamic row
+				if(RowText.contains(Recordname))
+				{
+					flag=true;
+					System.out.println("Row Number is => "+i);
+					
+					//using Dynamic row find List of Cells
+					List<WebElement> cells=DynamicRow.findElements(By.tagName("td"));
+					
+					//Target Required Cell
+					Webtable_Cell=cells.get(Cell);
+					break;  //stop Iteration
+					
+				}
+			}//for
+			
+			 System.out.println("Record avaiable status is => "+flag);
+			 return Webtable_Cell;
+			
+		}//Method
+		
+	 	
 }

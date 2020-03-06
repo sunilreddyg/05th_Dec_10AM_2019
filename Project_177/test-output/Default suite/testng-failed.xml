@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="framework.Testng.Listeners.MyTest">
+      <class name="pageobjects.PageFactory.Run_Pageobjects_With_Keyword">
         <methods>
-          <include name="tc006"/>
-          <include name="tc002"/>
-          <include name="tc003"/>
-          <include name="tc005"/>
+          <include name="afterClass"/>
+          <include name="SearchFlight_For_Roundtrip"/>
+          <include name="beforeClass"/>
         </methods>
-      </class> <!-- framework.Testng.Listeners.MyTest -->
+      </class> <!-- pageobjects.PageFactory.Run_Pageobjects_With_Keyword -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

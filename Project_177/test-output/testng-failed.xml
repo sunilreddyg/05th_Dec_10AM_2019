@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [default]">
-  <listeners>
-    <listener class-name="framework.Testng.Listeners.Run_Listeners"/>
-  </listeners>
-  <test thread-count="5" name="test1(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="framework.Testng.Listeners.MyTest">
+      <class name="pageobjects.PageFactory.Run_Pageobjects_With_Keyword">
         <methods>
-          <include name="tc006"/>
-          <include name="tc002"/>
-          <include name="tc003"/>
-          <include name="tc005"/>
+          <include name="afterClass"/>
+          <include name="SearchFlight_For_Roundtrip"/>
+          <include name="beforeClass"/>
         </methods>
-      </class> <!-- framework.Testng.Listeners.MyTest -->
+      </class> <!-- pageobjects.PageFactory.Run_Pageobjects_With_Keyword -->
     </classes>
-  </test> <!-- test1(failed) -->
-</suite> <!-- Failed suite [default] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
