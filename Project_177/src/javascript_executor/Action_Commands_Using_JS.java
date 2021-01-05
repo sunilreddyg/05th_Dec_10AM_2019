@@ -45,6 +45,7 @@ public class Action_Commands_Using_JS
 		//Perform click action using javascript on button..
 		WebElement Signup_btn=driver.findElement(By.xpath("//button[@name='websubmit']"));
 		js.executeScript("arguments[0].click()",Signup_btn);
+		//This is final code for execution
 	}
 
 }
